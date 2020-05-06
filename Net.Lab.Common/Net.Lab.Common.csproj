@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Net.Lab.DAL\Net.Lab.DAL.csproj" />
+    <ProjectReference Include="..\Net.Lab.DataContracts\Net.Lab.DataContracts.csproj" />
+  </ItemGroup>
+
+</Project>

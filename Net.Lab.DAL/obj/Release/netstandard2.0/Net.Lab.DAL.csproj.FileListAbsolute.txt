@@ -1,0 +1,12 @@
+C:\Users\selfd\source\repos\Net.Lab\Net.Lab.DAL\bin\Release\netstandard2.0\Net.Lab.DAL.deps.json
+C:\Users\selfd\source\repos\Net.Lab\Net.Lab.DAL\bin\Release\netstandard2.0\Net.Lab.DAL.dll
+C:\Users\selfd\source\repos\Net.Lab\Net.Lab.DAL\bin\Release\netstandard2.0\Net.Lab.DAL.pdb
+C:\Users\selfd\source\repos\Net.Lab\Net.Lab.DAL\bin\Release\netstandard2.0\Net.Lab.DataContracts.dll
+C:\Users\selfd\source\repos\Net.Lab\Net.Lab.DAL\bin\Release\netstandard2.0\Net.Lab.DataContracts.pdb
+C:\Users\selfd\source\repos\Net.Lab\Net.Lab.DAL\obj\Release\netstandard2.0\Net.Lab.DAL.csprojAssemblyReference.cache
+C:\Users\selfd\source\repos\Net.Lab\Net.Lab.DAL\obj\Release\netstandard2.0\Net.Lab.DAL.csproj.CoreCompileInputs.cache
+C:\Users\selfd\source\repos\Net.Lab\Net.Lab.DAL\obj\Release\netstandard2.0\Net.Lab.DAL.AssemblyInfoInputs.cache
+C:\Users\selfd\source\repos\Net.Lab\Net.Lab.DAL\obj\Release\netstandard2.0\Net.Lab.DAL.AssemblyInfo.cs
+C:\Users\selfd\source\repos\Net.Lab\Net.Lab.DAL\obj\Release\netstandard2.0\Net.Lab.DAL.csproj.CopyComplete
+C:\Users\selfd\source\repos\Net.Lab\Net.Lab.DAL\obj\Release\netstandard2.0\Net.Lab.DAL.dll
+C:\Users\selfd\source\repos\Net.Lab\Net.Lab.DAL\obj\Release\netstandard2.0\Net.Lab.DAL.pdb

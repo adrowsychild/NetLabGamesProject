@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "HKu+7E6MxScIHudTg/rVECGNKjMPiktf9mllpbzit9ajHqyBqtN6kVoAi0iT2LqGlfv8ZJTYg5oqB+r6zW+AGQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\selfd\\source\\repos\\Net.Lab\\Net.Lab.Common\\Net.Lab.Common.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\selfd\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\selfd\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
