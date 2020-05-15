@@ -98,3 +98,4 @@ C:\Users\selfd\source\repos\Net.Lab\Net.Lab.CoreWebAPI\obj\Release\netcoreapp3.1
 C:\Users\selfd\source\repos\Net.Lab\Net.Lab.CoreWebAPI\obj\Release\netcoreapp3.1\Net.Lab.CoreWebAPI.dll
 C:\Users\selfd\source\repos\Net.Lab\Net.Lab.CoreWebAPI\obj\Release\netcoreapp3.1\Net.Lab.CoreWebAPI.pdb
 C:\Users\selfd\source\repos\Net.Lab\Net.Lab.CoreWebAPI\obj\Release\netcoreapp3.1\Net.Lab.CoreWebAPI.genruntimeconfig.cache
+C:\Users\selfd\source\repos\Net.Lab\Net.Lab.CoreWebAPI\bin\Release\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll

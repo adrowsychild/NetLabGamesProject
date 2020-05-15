@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.VisualStudio.Web.CodeGeneration;
+using Net.Lab.Common;
 using Net.Lab.Common.Implementations;
 using Net.Lab.Common.Interfaces;
 using Net.Lab.CoreWebAPI.Middlewares;
@@ -31,12 +32,9 @@ namespace Net.Lab.CoreWebAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddScoped<IGamesService, GamesService>();
-            services.AddScoped<IAwardsService, AwardsService>();
-            services.AddScoped<IReviewsService, ReviewsService>();
-            services.AddSingleton<IGamesRepository, InMemoryGamesRepository>();
-            //services.AddSingleton<ILogger<LogMiddleware>, ConsoleLogger>();
+            services.RegisterCommonServices();
             services.AddControllers();
+            services.AddMemoryCache();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

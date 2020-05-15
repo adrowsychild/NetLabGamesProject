@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using Net.Lab.Common.Implementations;
+using Microsoft.Extensions.Caching.Memory;
 using Net.Lab.Common.Interfaces;
 using Net.Lab.DAL.Exceptions;
-using Net.Lab.DataContracts.Awards;
 using Net.Lab.DataContracts.Games;
-using Net.Lab.DataContracts.Reviews;
 
 namespace Net.Lab.CoreWebAPI.Controllers
 {
@@ -15,21 +13,19 @@ namespace Net.Lab.CoreWebAPI.Controllers
     public class GamesController : ControllerBase
     {
         private static IGamesService gamesService;
+        private readonly IMemoryCache cache;
+        private string gamekey = "game";
+        string allGamesKey = "game000";
 
-        private static IAwardsService awardsService;
+        //private static IAwardsService awardsService;
+        //private static IReviewsService reviewsService;
 
-        private static IReviewsService reviewsService;
-
-        public GamesController(IGamesService gamesService)
+        public GamesController(IGamesService gamesService, IMemoryCache cache)
         {
+            this.cache = cache;
+            // try without it
             if (GamesController.gamesService == null)
                 GamesController.gamesService = gamesService;
-
-            if (awardsService == null)
-                awardsService = new AwardsService(gamesService);
-
-            if (reviewsService == null)
-                reviewsService = new ReviewsService(gamesService);
         }
 
         [HttpGet]
@@ -37,7 +33,12 @@ namespace Net.Lab.CoreWebAPI.Controllers
         {
             try
             {
-                var result = gamesService.GetGames();
+                if (!cache.TryGetValue(allGamesKey, out IEnumerable<Game> result))
+                {
+                    result = gamesService.GetGames();
+                    cache.Set(allGamesKey, result);
+                }
+                
                 return Ok(result);
             }
             catch (GameNotFoundException)
@@ -51,7 +52,12 @@ namespace Net.Lab.CoreWebAPI.Controllers
         {
             try
             {
-                var result = gamesService.GetGame(id);
+                if (!cache.TryGetValue(gamekey + id, out Game result))
+                {
+                    result = gamesService.GetGame(id);
+                    cache.Set(gamekey + id, result);
+                }
+
                 return Ok(result);
             }
             catch (GameNotFoundException)
@@ -63,9 +69,15 @@ namespace Net.Lab.CoreWebAPI.Controllers
         [HttpPost]
         public IActionResult CreateGame(Game game)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            
             try
             {
                 gamesService.CreateGame(game);
+                ClearAllGamesCache();
                 return Created("", game);
             }
             catch (InvalidGameException)
@@ -80,6 +92,8 @@ namespace Net.Lab.CoreWebAPI.Controllers
             try
             {
                 gamesService.EditGame(id, game);
+                cache.Set(gamekey + id, game);
+                ClearAllGamesCache();
                 return Ok();
             }
             catch (InvalidGameException)
@@ -98,6 +112,8 @@ namespace Net.Lab.CoreWebAPI.Controllers
             try
             {
                 gamesService.DeleteGame(id);
+                cache.Remove(gamekey + id);
+                ClearAllGamesCache();
                 return Ok();
             }
             catch (GameNotFoundException)
@@ -106,6 +122,12 @@ namespace Net.Lab.CoreWebAPI.Controllers
             }
         }
 
+        private void ClearAllGamesCache()
+        {
+            cache.Remove(allGamesKey);
+        }
+
+        /*
         [HttpGet("{gameId}/awards")]
         public ActionResult<IEnumerable<Award>> GetGameAwards(int gameId)
         {
@@ -205,6 +227,8 @@ namespace Net.Lab.CoreWebAPI.Controllers
             }
         }
 
+    
+
         [HttpGet("{gameId}/reviews")]
         public ActionResult<IEnumerable<Review>> GetGameReviews(int gameId)
         {
@@ -302,5 +326,7 @@ namespace Net.Lab.CoreWebAPI.Controllers
                 return NotFound();
             }
         }
+
+    */
     }
 }

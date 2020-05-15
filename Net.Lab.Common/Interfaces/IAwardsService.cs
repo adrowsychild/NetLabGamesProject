@@ -6,14 +6,14 @@ namespace Net.Lab.Common.Interfaces
 {
     public interface IAwardsService
     {
-        IEnumerable<Award> GetAwards(int gameId);
+        IEnumerable<Award> GetAwards();
 
-        Award GetAward(int gameId, int awardId);
+        Award GetAward(int awardId);
 
-        void CreateAward(int gameId, Award award);
+        void CreateAward(Award award);
 
-        void EditAward(int gameId, int awardId, Award award);
+        void EditAward(int awardId, Award award);
 
-        void DeleteAward(int gameId, int awardId);
+        void DeleteAward(int awardId);
     }
 }

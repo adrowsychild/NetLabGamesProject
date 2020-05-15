@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "HKu+7E6MxScIHudTg/rVECGNKjMPiktf9mllpbzit9ajHqyBqtN6kVoAi0iT2LqGlfv8ZJTYg5oqB+r6zW+AGQ==",
+  "dgSpecHash": "0uv/hB7cMO92W0g9AGhjRvvdgOAOHok5rD945/D7U1tFC12CApuKmCsAl/QqhvtE/GOrKZjMNx3+jPeYJSzZdA==",
   "success": true,
   "projectFilePath": "C:\\Users\\selfd\\source\\repos\\Net.Lab\\Net.Lab.Common\\Net.Lab.Common.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\selfd\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.3\\microsoft.extensions.dependencyinjection.abstractions.3.1.3.nupkg.sha512",
     "C:\\Users\\selfd\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\selfd\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\selfd\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\selfd\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }

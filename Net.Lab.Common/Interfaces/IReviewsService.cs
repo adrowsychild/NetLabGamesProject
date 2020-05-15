@@ -6,14 +6,14 @@ namespace Net.Lab.Common.Interfaces
 {
     public interface IReviewsService
     {
-        IEnumerable<Review> GetReviews(int gameId);
+        IEnumerable<Review> GetReviews();
 
-        Review GetReview(int gameId, int reviewId);
+        Review GetReview(int reviewId);
 
-        void CreateReview(int gameId, Review review);
+        void CreateReview(Review review);
 
-        void EditReview(int gameId, int reviewId, Review review);
+        void EditReview(int reviewId, Review review);
 
-        void DeleteReview(int gameId, int reviewId);
+        void DeleteReview(int reviewId);
     }
 }

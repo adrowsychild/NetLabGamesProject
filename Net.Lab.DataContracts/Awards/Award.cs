@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Net.Lab.DataContracts.Awards
 {
@@ -6,6 +7,10 @@ namespace Net.Lab.DataContracts.Awards
     {
         public int Id { get; set; }
 
+        [Required]
+        public int GameId { get; set; }
+
+        [Required]
         public string Name { get; set; }
     }
 }
