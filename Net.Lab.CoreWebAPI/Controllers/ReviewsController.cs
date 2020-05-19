@@ -24,8 +24,7 @@ namespace Net.Lab.CoreWebAPI.Controllers
         {
             this.cache = cache;
 
-            if (ReviewsController.reviewsService == null)
-                ReviewsController.reviewsService = reviewsService;
+            ReviewsController.reviewsService = reviewsService;
         }
 
         [HttpGet]

@@ -23,9 +23,7 @@ namespace Net.Lab.CoreWebAPI.Controllers
         public GamesController(IGamesService gamesService, IMemoryCache cache)
         {
             this.cache = cache;
-            // try without it
-            if (GamesController.gamesService == null)
-                GamesController.gamesService = gamesService;
+            GamesController.gamesService = gamesService;
         }
 
         [HttpGet]

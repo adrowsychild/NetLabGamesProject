@@ -24,8 +24,7 @@ namespace Net.Lab.CoreWebAPI.Controllers
         public AwardsController(IAwardsService awardsService, IMemoryCache cache)
         {
             this.cache = cache;
-            if (AwardsController.awardsService == null)
-                AwardsController.awardsService = awardsService;
+            AwardsController.awardsService = awardsService;
         }
 
         [HttpGet]
