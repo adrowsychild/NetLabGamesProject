@@ -1,22 +1,11 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using Microsoft.VisualStudio.Web.CodeGeneration;
 using Net.Lab.Common;
-using Net.Lab.Common.Implementations;
-using Net.Lab.Common.Interfaces;
 using Net.Lab.CoreWebAPI.Middlewares;
-using Net.Lab.DAL.Repositories.Implementations;
-using Net.Lab.DAL.Repositories.Interfaces;
 
 namespace Net.Lab.CoreWebAPI
 {

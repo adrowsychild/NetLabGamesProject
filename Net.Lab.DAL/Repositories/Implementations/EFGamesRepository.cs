@@ -1,14 +1,14 @@
-﻿using Net.Lab.DAL.Repositories.Interfaces;
-using Net.Lab.DataContracts.Games;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
-using System.Text;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using Net.Lab.DAL.Repositories.Interfaces;
+using Net.Lab.DataContracts.Games;
 
 namespace Net.Lab.DAL.Repositories.Implementations
 {
-    public class EFGamesRepository : IGamesRepository
+    public class EFGamesRepository : IGamesRepository, IGamesAsyncRepository
     {
         private readonly ApplicationContext context;
 
@@ -45,13 +45,33 @@ namespace Net.Lab.DAL.Repositories.Implementations
             this.context.SaveChanges();
         }
 
-        private Game AssignGame(Game to, Game from)
+        public async Task<IEnumerable<Game>> GetGamesAsync()
         {
-            to.Name = from.Name;
-            to.Author = from.Author;
-            to.Description = from.Description;
-            to.ReleaseYear = from.ReleaseYear;
-            return to;
+            return await this.context.Games.ToArrayAsync();
+        }
+
+        public async Task<Game> GetGameAsync(int id)
+        {
+            return await this.context.Games.FindAsync(id);
+        }
+
+        public async Task CreateGameAsync(Game game)
+        {
+            await this.context.Games.AddAsync(game);
+            await this.context.SaveChangesAsync();
+        }
+
+        public async Task EditGameAsync(int id, Game game)
+        {
+            var foundGame = await GetGameAsync(id);
+            foundGame = (Game)Net.Lab.DAL.Helpers.ModelsChangeHelper.AssignObject(foundGame, game);
+            await this.context.SaveChangesAsync();
+        }
+
+        public async Task DeleteGameAsync(int id)
+        {
+            this.context.Games.Remove(await GetGameAsync(id));
+            await this.context.SaveChangesAsync();
         }
     }
 }

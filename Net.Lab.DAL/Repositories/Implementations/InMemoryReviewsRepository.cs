@@ -1,8 +1,8 @@
-﻿using Net.Lab.DAL.Exceptions;
+﻿using System;
+using System.Collections.Generic;
+using Net.Lab.DAL.Exceptions;
 using Net.Lab.DAL.Repositories.Interfaces;
 using Net.Lab.DataContracts.Reviews;
-using System;
-using System.Collections.Generic;
 
 namespace Net.Lab.DAL.Repositories.Implementations
 {

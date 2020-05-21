@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using Net.Lab.DAL.Exceptions;
 using Net.Lab.DAL.Repositories.Interfaces;
-using Net.Lab.DataContracts.Awards;
 using Net.Lab.DataContracts.Games;
-using Net.Lab.DataContracts.Reviews;
 
 namespace Net.Lab.DAL.Repositories.Implementations
 {

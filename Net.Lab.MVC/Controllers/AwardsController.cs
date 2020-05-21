@@ -26,7 +26,6 @@ namespace Net.Lab.MVC.Controllers
         {
             var allAwards = awardsService.GetAwards();
 
-            // it's important to send the variable!
             return View(allAwards);
         }
 

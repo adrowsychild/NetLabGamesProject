@@ -1,13 +1,14 @@
-﻿using Net.Lab.DAL.Repositories.Interfaces;
-using Net.Lab.DataContracts.Awards;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using Net.Lab.DAL.Repositories.Interfaces;
+using Net.Lab.DataContracts.Awards;
 
 namespace Net.Lab.DAL.Repositories.Implementations
 {
-    public class EFAwardsRepository : IAwardsRepository
+    public class EFAwardsRepository : IAwardsRepository, IAwardsAsyncRepository
     {
         private readonly ApplicationContext context;
 
@@ -41,6 +42,35 @@ namespace Net.Lab.DAL.Repositories.Implementations
         {
             this.context.Awards.Remove(GetAward(id));
             this.context.SaveChanges();
+        }
+
+        public async Task<IEnumerable<Award>> GetAwardsAsync()
+        {
+            return await this.context.Awards.ToArrayAsync();
+        }
+
+        public async Task<Award> GetAwardAsync(int id)
+        {
+            return await this.context.Awards.FindAsync(id);
+        }
+
+        public async Task CreateAwardAsync(Award award)
+        {
+            await this.context.Awards.AddAsync(award);
+            await this.context.SaveChangesAsync();
+        }
+
+        public async Task EditAwardAsync(int id, Award award)
+        {
+            var foundAward = await GetAwardAsync(id);
+            foundAward = (Award)Net.Lab.DAL.Helpers.ModelsChangeHelper.AssignObject(foundAward, award);
+            await this.context.SaveChangesAsync();
+        }
+
+        public async Task DeleteAwardAsync(int id)
+        {
+            this.context.Awards.Remove(await GetAwardAsync(id));
+            await this.context.SaveChangesAsync();
         }
     }
 }

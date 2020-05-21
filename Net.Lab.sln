@@ -11,7 +11,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Net.Lab.Common", "Net.Lab.C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Net.Lab.DAL", "Net.Lab.DAL\Net.Lab.DAL.csproj", "{62747DA7-0849-482B-BC53-71B43C99E83B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net.Lab.MVC", "Net.Lab.MVC\Net.Lab.MVC.csproj", "{A14359DB-4448-4E6D-8C12-A0D13CC24E41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Net.Lab.MVC", "Net.Lab.MVC\Net.Lab.MVC.csproj", "{A14359DB-4448-4E6D-8C12-A0D13CC24E41}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{225F1F7D-392C-4F5C-8543-9857DEB19EA9}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

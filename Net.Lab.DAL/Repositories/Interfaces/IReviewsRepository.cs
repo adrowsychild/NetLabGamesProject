@@ -1,7 +1,6 @@
-﻿using Net.Lab.DataContracts.Reviews;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using Net.Lab.DataContracts.Reviews;
 
 namespace Net.Lab.DAL.Repositories.Interfaces
 {

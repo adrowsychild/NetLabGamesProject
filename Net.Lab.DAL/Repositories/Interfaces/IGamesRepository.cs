@@ -1,7 +1,6 @@
-﻿using Net.Lab.DataContracts.Games;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using Net.Lab.DataContracts.Games;
 
 namespace Net.Lab.DAL.Repositories.Interfaces
 {

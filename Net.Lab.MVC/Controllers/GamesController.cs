@@ -24,7 +24,6 @@ namespace Net.Lab.MVC.Controllers
         {
             var allgames = gamesService.GetGames();
 
-            // it's important to send the variable!
             return View(allgames);
         }
 

@@ -1,10 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System;
+using Microsoft.EntityFrameworkCore;
 using Net.Lab.DataContracts.Awards;
 using Net.Lab.DataContracts.Games;
 using Net.Lab.DataContracts.Reviews;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Net.Lab.DAL
 {

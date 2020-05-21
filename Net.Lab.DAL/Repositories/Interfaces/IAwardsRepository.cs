@@ -1,6 +1,6 @@
-﻿using Net.Lab.DataContracts.Awards;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using Net.Lab.DataContracts.Awards;
 
 namespace Net.Lab.DAL.Repositories.Interfaces
 {

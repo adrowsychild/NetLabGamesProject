@@ -1,6 +1,4 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Net.Lab.DAL.Repositories.Implementations;
-using Net.Lab.DAL.Repositories.Interfaces;
 
 namespace Net.Lab.DAL
 {
