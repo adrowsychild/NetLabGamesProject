@@ -22,19 +22,20 @@ namespace Net.Lab.MVC.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var allgames = gamesService.GetGames();
+            // var allgames = gamesService.GetGames();
+            var allgames = await gamesService.GetGamesAsync();
 
             return View(allgames);
         }
 
         [HttpGet("Create")]
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
             return View();
         }
 
         [HttpPost("Create")]
-        public IActionResult Create(Game game)
+        public async Task<IActionResult> Create(Game game)
         {
             try
             {
@@ -44,6 +45,7 @@ namespace Net.Lab.MVC.Controllers
                 }
 
                 gamesService.CreateGame(game);
+                // await gamesService.CreateGameAsync(game);
 
                 return RedirectToAction(nameof(Index));
             }
@@ -54,13 +56,14 @@ namespace Net.Lab.MVC.Controllers
         }
 
         [HttpGet("Edit/{id}")]
-        public IActionResult Edit(int id)
+        public async Task<IActionResult> Edit(int id)
         {
             return View(gamesService.GetGame(id));
+            // return View(await gamesService.GetGameAsync(id));
         }
 
         [HttpPost("Edit/{id}")]
-        public IActionResult Edit(int id, Game game)
+        public async Task<IActionResult> Edit(int id, Game game)
         {
             try
             {
@@ -72,6 +75,7 @@ namespace Net.Lab.MVC.Controllers
                 }
 
                 gamesService.EditGame(id, game);
+                // await gamesService.EditGameAsync(id, game);
 
                 return RedirectToAction(nameof(Index));
             }
@@ -82,18 +86,20 @@ namespace Net.Lab.MVC.Controllers
         }
 
         [HttpGet("Delete/{id}")]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
             return View(gamesService.GetGame(id));
+            // return View(await gamesService.GetGameAsync(id));
         }
 
         
         [HttpPost("Delete/{id}")]
-        public IActionResult Delete(int id, Game game)
+        public async Task<IActionResult> Delete(int id, Game game)
         {
             try
             {
                 gamesService.DeleteGame(id);
+                // await gamesService.DeleteGameAsync(id);
 
                 return RedirectToAction(nameof(Index));
             }

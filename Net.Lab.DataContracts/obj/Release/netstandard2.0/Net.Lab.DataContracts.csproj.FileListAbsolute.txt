@@ -6,4 +6,3 @@ C:\Users\selfd\source\repos\Net.Lab\Net.Lab.DataContracts\obj\Release\netstandar
 C:\Users\selfd\source\repos\Net.Lab\Net.Lab.DataContracts\obj\Release\netstandard2.0\Net.Lab.DataContracts.dll
 C:\Users\selfd\source\repos\Net.Lab\Net.Lab.DataContracts\obj\Release\netstandard2.0\Net.Lab.DataContracts.pdb
 C:\Users\selfd\source\repos\Net.Lab\Net.Lab.DataContracts\obj\Release\netstandard2.0\Net.Lab.DataContracts.csproj.CoreCompileInputs.cache
-C:\Users\selfd\source\repos\Net.Lab\Net.Lab.DataContracts\obj\Release\netstandard2.0\Net.Lab.DataContracts.csprojAssemblyReference.cache

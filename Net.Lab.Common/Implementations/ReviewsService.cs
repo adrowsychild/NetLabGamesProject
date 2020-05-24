@@ -10,16 +10,10 @@ namespace Net.Lab.Common.Implementations
     public class ReviewsService : IReviewsService
     {
         private IReviewsRepository reviewsRepository;
-        private IReviewsAsyncRepository reviewsAsyncRepository;
 
         public ReviewsService(IReviewsRepository reviewsRepository)
         {
             this.reviewsRepository = reviewsRepository;
-        }
-
-        public ReviewsService(IReviewsAsyncRepository reviewsAsyncRepository)
-        {
-            this.reviewsAsyncRepository = reviewsAsyncRepository;
         }
 
         public IEnumerable<Review> GetReviews()
@@ -49,27 +43,27 @@ namespace Net.Lab.Common.Implementations
 
         public async Task<IEnumerable<Review>> GetReviewsAsync()
         {
-            return await this.reviewsAsyncRepository.GetReviewsAsync();
+            return await this.reviewsRepository.GetReviewsAsync();
         }
 
         public async Task<Review> GetReviewAsync(int id)
         {
-            return await this.reviewsAsyncRepository.GetReviewAsync(id);
+            return await this.reviewsRepository.GetReviewAsync(id);
         }
 
         public async Task CreateReviewAsync(Review review)
         {
-            await this.reviewsAsyncRepository.CreateReviewAsync(review);
+            await this.reviewsRepository.CreateReviewAsync(review);
         }
 
         public async Task EditReviewAsync(int id, Review review)
         {
-            await this.reviewsAsyncRepository.EditReviewAsync(id, review);
+            await this.reviewsRepository.EditReviewAsync(id, review);
         }
 
         public async Task DeleteReviewAsync(int id)
         {
-            await this.reviewsAsyncRepository.DeleteReviewAsync(id);
+            await this.reviewsRepository.DeleteReviewAsync(id);
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Net.Lab.DAL.Exceptions;
 using Net.Lab.DAL.Repositories.Interfaces;
 using Net.Lab.DataContracts.Awards;
@@ -41,16 +42,6 @@ namespace Net.Lab.DAL.Repositories.Implementations
 
             return repository.ToArray();
         }
-
-        /*
-            PROBLEM
-            if we change data in awardRepository, we should change data in every related repository.
-
-            to make changes, 
-
-
-            new interface IFlexibleRepository
-        */
 
         public void CreateAward(Award award)
         {
@@ -113,6 +104,31 @@ namespace Net.Lab.DAL.Repositories.Implementations
                 throw new AwardNotFoundException();
 
             repository.Remove(result);
+        }
+
+        public Task<IEnumerable<Award>> GetAwardsAsync()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Award> GetAwardAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task CreateAwardAsync(Award award)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task EditAwardAsync(int id, Award award)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task DeleteAwardAsync(int id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

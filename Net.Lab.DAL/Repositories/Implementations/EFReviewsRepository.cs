@@ -8,7 +8,7 @@ using Net.Lab.DataContracts.Reviews;
 
 namespace Net.Lab.DAL.Repositories.Implementations
 {
-    public class EFReviewsRepository : IReviewsRepository, IReviewsAsyncRepository
+    public class EFReviewsRepository : IReviewsRepository
     {
         private readonly ApplicationContext context;
 

@@ -10,16 +10,10 @@ namespace Net.Lab.Common.Implementations
     public class AwardsService : IAwardsService
     {
         private IAwardsRepository awardsRepository;
-        private IAwardsAsyncRepository awardsAsyncRepository;
 
         public AwardsService(IAwardsRepository awardsRepository)
         {
             this.awardsRepository = awardsRepository;
-        }
-
-        public AwardsService(IAwardsAsyncRepository awardsAsyncRepository)
-        {
-            this.awardsAsyncRepository = awardsAsyncRepository;
         }
 
         public IEnumerable<Award> GetAwards()
@@ -49,27 +43,27 @@ namespace Net.Lab.Common.Implementations
 
         public async Task<IEnumerable<Award>> GetAwardsAsync()
         {
-            return await this.awardsAsyncRepository.GetAwardsAsync();
+            return await this.awardsRepository.GetAwardsAsync();
         }
 
         public async Task<Award> GetAwardAsync(int awardId)
         {
-            return await this.awardsAsyncRepository.GetAwardAsync(awardId);
+            return await this.awardsRepository.GetAwardAsync(awardId);
         }
 
         public async Task CreateAwardAsync(Award award)
         {
-            await this.awardsAsyncRepository.CreateAwardAsync(award);
+            await this.awardsRepository.CreateAwardAsync(award);
         }
 
         public async Task EditAwardAsync(int awardId, Award award)
         {
-            await this.awardsAsyncRepository.EditAwardAsync(awardId, award);
+            await this.awardsRepository.EditAwardAsync(awardId, award);
         }
 
         public async Task DeleteAwardAsync(int awardId)
         {
-            await this.awardsAsyncRepository.DeleteAwardAsync(awardId);
+            await this.awardsRepository.DeleteAwardAsync(awardId);
         }
     }
 }

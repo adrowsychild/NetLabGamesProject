@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Net.Lab.DAL.Exceptions;
 using Net.Lab.DAL.Repositories.Interfaces;
 using Net.Lab.DataContracts.Reviews;
@@ -40,16 +41,6 @@ namespace Net.Lab.DAL.Repositories.Implementations
 
             return repository.ToArray();
         }
-
-        /*
-            PROBLEM
-            if we change data in awardRepository, we should change data in every related repository.
-
-            to make changes, 
-
-
-            new interface IFlexibleRepository
-        */
 
         public void CreateReview(Review review)
         {
@@ -112,6 +103,31 @@ namespace Net.Lab.DAL.Repositories.Implementations
                 throw new ReviewNotFoundException();
 
             repository.Remove(result);
+        }
+
+        public Task<IEnumerable<Review>> GetReviewsAsync()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Review> GetReviewAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task CreateReviewAsync(Review review)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task EditReviewAsync(int id, Review review)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task DeleteReviewAsync(int id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

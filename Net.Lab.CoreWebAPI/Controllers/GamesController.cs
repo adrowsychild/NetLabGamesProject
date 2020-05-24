@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using Net.Lab.Common.Interfaces;
@@ -26,6 +27,7 @@ namespace Net.Lab.CoreWebAPI.Controllers
             GamesController.gamesService = gamesService;
         }
 
+        
         [HttpGet]
         public ActionResult<IEnumerable<Game>> GetAllGames()
         {
@@ -36,7 +38,7 @@ namespace Net.Lab.CoreWebAPI.Controllers
                     result = gamesService.GetGames();
                     cache.Set(allGamesKey, result);
                 }
-                
+
                 return Ok(result);
             }
             catch (GameNotFoundException)

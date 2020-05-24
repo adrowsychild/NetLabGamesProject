@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Net.Lab.DataContracts.Reviews;
 
 namespace Net.Lab.Common.Interfaces
@@ -15,5 +16,15 @@ namespace Net.Lab.Common.Interfaces
         void EditReview(int reviewId, Review review);
 
         void DeleteReview(int reviewId);
+
+        Task<IEnumerable<Review>> GetReviewsAsync();
+
+        Task<Review> GetReviewAsync(int reviewId);
+
+        Task CreateReviewAsync(Review review);
+
+        Task EditReviewAsync(int reviewId, Review review);
+
+        Task DeleteReviewAsync(int reviewId);
     }
 }

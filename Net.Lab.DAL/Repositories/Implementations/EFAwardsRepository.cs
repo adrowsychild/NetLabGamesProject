@@ -8,7 +8,7 @@ using Net.Lab.DataContracts.Awards;
 
 namespace Net.Lab.DAL.Repositories.Implementations
 {
-    public class EFAwardsRepository : IAwardsRepository, IAwardsAsyncRepository
+    public class EFAwardsRepository : IAwardsRepository
     {
         private readonly ApplicationContext context;
 
@@ -16,6 +16,7 @@ namespace Net.Lab.DAL.Repositories.Implementations
         {
             this.context = context;
         }
+
         public IEnumerable<Award> GetAwards()
         {
             return this.context.Awards.ToArray();

@@ -36,7 +36,7 @@ namespace Net.Lab.MVC.Controllers
         }
 
         [HttpPost("Create")]
-        public IActionResult Create(Award award)
+        public async Task<IActionResult> Create(Award award)
         {
             try
             {
@@ -45,6 +45,7 @@ namespace Net.Lab.MVC.Controllers
                     return View();
                 }
 
+                // await awardsService.CreateAwardAsync(award);
                 awardsService.CreateAward(award);
 
                 return RedirectToAction(nameof(Index));
@@ -57,13 +58,14 @@ namespace Net.Lab.MVC.Controllers
         }
 
         [HttpGet("Edit/{id}")]
-        public IActionResult Edit(int id)
+        public async Task<IActionResult> Edit(int id)
         {
+            // return View(awardsService.GetAwardAsync(id));
             return View(awardsService.GetAward(id));
         }
 
         [HttpPost("Edit/{id}")]
-        public IActionResult Edit(int id, Award award)
+        public async Task<IActionResult> Edit(int id, Award award)
         {
             try
             {
@@ -74,6 +76,7 @@ namespace Net.Lab.MVC.Controllers
                     return View();
                 }
 
+                // await awardsService.EditAwardAsync(id, award);
                 awardsService.EditAward(id, award);
 
                 return RedirectToAction(nameof(Index));
@@ -86,17 +89,19 @@ namespace Net.Lab.MVC.Controllers
         }
 
         [HttpGet("Delete/{id}")]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
+            // return View(await awardsService.GetAwardAsync(id));
             return View(awardsService.GetAward(id));
         }
 
 
         [HttpPost("Delete/{id}")]
-        public IActionResult Delete(int id, Award award)
+        public async Task<IActionResult> Delete(int id, Award award)
         {
             try
             {
+                // await awardsService.DeleteAwardAsync(id);
                 awardsService.DeleteAward(id);
 
                 return RedirectToAction(nameof(Index));

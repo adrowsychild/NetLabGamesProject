@@ -1,9 +1,9 @@
 C:\Users\selfd\source\repos\Net.Lab\Net.Lab.DataContracts\bin\Debug\netstandard2.0\Net.Lab.DataContracts.deps.json
 C:\Users\selfd\source\repos\Net.Lab\Net.Lab.DataContracts\bin\Debug\netstandard2.0\Net.Lab.DataContracts.dll
 C:\Users\selfd\source\repos\Net.Lab\Net.Lab.DataContracts\bin\Debug\netstandard2.0\Net.Lab.DataContracts.pdb
-C:\Users\selfd\source\repos\Net.Lab\Net.Lab.DataContracts\obj\Debug\netstandard2.0\Net.Lab.DataContracts.csprojAssemblyReference.cache
 C:\Users\selfd\source\repos\Net.Lab\Net.Lab.DataContracts\obj\Debug\netstandard2.0\Net.Lab.DataContracts.csproj.CoreCompileInputs.cache
 C:\Users\selfd\source\repos\Net.Lab\Net.Lab.DataContracts\obj\Debug\netstandard2.0\Net.Lab.DataContracts.AssemblyInfoInputs.cache
 C:\Users\selfd\source\repos\Net.Lab\Net.Lab.DataContracts\obj\Debug\netstandard2.0\Net.Lab.DataContracts.AssemblyInfo.cs
 C:\Users\selfd\source\repos\Net.Lab\Net.Lab.DataContracts\obj\Debug\netstandard2.0\Net.Lab.DataContracts.dll
 C:\Users\selfd\source\repos\Net.Lab\Net.Lab.DataContracts\obj\Debug\netstandard2.0\Net.Lab.DataContracts.pdb
+C:\Users\selfd\source\repos\Net.Lab\Net.Lab.DataContracts\obj\Debug\netstandard2.0\Net.Lab.DataContracts.csprojAssemblyReference.cache

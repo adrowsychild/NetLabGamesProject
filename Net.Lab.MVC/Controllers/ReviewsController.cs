@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -24,19 +23,20 @@ namespace Net.Lab.MVC.Controllers
 
         public async Task<IActionResult> Index()
         {
+            // var allReviews = await reviewsService.GetReviewsAsync();
             var allReviews = reviewsService.GetReviews();
 
             return View(allReviews);
         }
 
         [HttpGet("Create")]
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
             return View();
         }
 
         [HttpPost("Create")]
-        public IActionResult Create(Review review)
+        public async Task<IActionResult> Create(Review review)
         {
             try
             {
@@ -45,6 +45,7 @@ namespace Net.Lab.MVC.Controllers
                     return View();
                 }
 
+                // await reviewsService.CreateReviewAsync(review);
                 reviewsService.CreateReview(review);
 
                 return RedirectToAction(nameof(Index));
@@ -57,13 +58,14 @@ namespace Net.Lab.MVC.Controllers
         }
 
         [HttpGet("Edit/{id}")]
-        public IActionResult Edit(int id)
+        public async Task<IActionResult> Edit(int id)
         {
+            // return View(await reviewsService.GetReviewAsync(id));
             return View(reviewsService.GetReview(id));
         }
 
         [HttpPost("Edit/{id}")]
-        public IActionResult Edit(int id, Review review)
+        public async Task<IActionResult> Edit(int id, Review review)
         {
             try
             {
@@ -74,6 +76,7 @@ namespace Net.Lab.MVC.Controllers
                     return View();
                 }
 
+                // await reviewsService.EditReviewAsync(id, review);
                 reviewsService.EditReview(id, review);
 
                 return RedirectToAction(nameof(Index));
@@ -86,17 +89,19 @@ namespace Net.Lab.MVC.Controllers
         }
 
         [HttpGet("Delete/{id}")]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
+            // return View(await reviewsService.GetReviewAsync(id));
             return View(reviewsService.GetReview(id));
         }
 
 
         [HttpPost("Delete/{id}")]
-        public IActionResult Delete(int id, Review review)
+        public async Task<IActionResult> Delete(int id, Review review)
         {
             try
             {
+                // await reviewsService.DeleteReviewAsync(id);
                 reviewsService.DeleteReview(id);
 
                 return RedirectToAction(nameof(Index));

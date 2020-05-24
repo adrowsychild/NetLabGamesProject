@@ -2484,7 +2484,7 @@
       },
       "Net.Lab.Common/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
+        "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.4",
           "Net.Lab.DAL": "1.0.0",
@@ -2499,7 +2499,7 @@
       },
       "Net.Lab.DAL/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
+        "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "3.1.4",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.4",

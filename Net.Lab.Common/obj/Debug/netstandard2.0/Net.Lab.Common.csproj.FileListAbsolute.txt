@@ -1,7 +1,3 @@
-C:\Users\selfd\source\repos\Net.Lab\Net.Lab.Common\obj\Debug\netstandard2.0\Net.Lab.Common.csprojAssemblyReference.cache
-C:\Users\selfd\source\repos\Net.Lab\Net.Lab.Common\obj\Debug\netstandard2.0\Net.Lab.Common.csproj.CoreCompileInputs.cache
-C:\Users\selfd\source\repos\Net.Lab\Net.Lab.Common\obj\Debug\netstandard2.0\Net.Lab.Common.AssemblyInfoInputs.cache
-C:\Users\selfd\source\repos\Net.Lab\Net.Lab.Common\obj\Debug\netstandard2.0\Net.Lab.Common.AssemblyInfo.cs
 C:\Users\selfd\source\repos\Net.Lab\Net.Lab.Common\bin\Debug\netstandard2.0\Net.Lab.Common.deps.json
 C:\Users\selfd\source\repos\Net.Lab\Net.Lab.Common\bin\Debug\netstandard2.0\Net.Lab.Common.dll
 C:\Users\selfd\source\repos\Net.Lab\Net.Lab.Common\bin\Debug\netstandard2.0\Net.Lab.Common.pdb
@@ -9,6 +5,10 @@ C:\Users\selfd\source\repos\Net.Lab\Net.Lab.Common\bin\Debug\netstandard2.0\Net.
 C:\Users\selfd\source\repos\Net.Lab\Net.Lab.Common\bin\Debug\netstandard2.0\Net.Lab.DataContracts.dll
 C:\Users\selfd\source\repos\Net.Lab\Net.Lab.Common\bin\Debug\netstandard2.0\Net.Lab.DAL.pdb
 C:\Users\selfd\source\repos\Net.Lab\Net.Lab.Common\bin\Debug\netstandard2.0\Net.Lab.DataContracts.pdb
+C:\Users\selfd\source\repos\Net.Lab\Net.Lab.Common\obj\Debug\netstandard2.0\Net.Lab.Common.csprojAssemblyReference.cache
+C:\Users\selfd\source\repos\Net.Lab\Net.Lab.Common\obj\Debug\netstandard2.0\Net.Lab.Common.csproj.CoreCompileInputs.cache
+C:\Users\selfd\source\repos\Net.Lab\Net.Lab.Common\obj\Debug\netstandard2.0\Net.Lab.Common.AssemblyInfoInputs.cache
+C:\Users\selfd\source\repos\Net.Lab\Net.Lab.Common\obj\Debug\netstandard2.0\Net.Lab.Common.AssemblyInfo.cs
 C:\Users\selfd\source\repos\Net.Lab\Net.Lab.Common\obj\Debug\netstandard2.0\Net.Lab.Common.csproj.CopyComplete
 C:\Users\selfd\source\repos\Net.Lab\Net.Lab.Common\obj\Debug\netstandard2.0\Net.Lab.Common.dll
 C:\Users\selfd\source\repos\Net.Lab\Net.Lab.Common\obj\Debug\netstandard2.0\Net.Lab.Common.pdb

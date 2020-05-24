@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Net.Lab.DAL.Exceptions;
 using Net.Lab.DAL.Repositories.Interfaces;
 using Net.Lab.DataContracts.Games;
@@ -91,6 +92,31 @@ namespace Net.Lab.DAL.Repositories.Implementations
                 throw new GameNotFoundException();
 
             repository.RemoveAll(x => x.Id == id);
+        }
+
+        public async Task<Game> GetGameAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task<IEnumerable<Game>> GetGamesAsync()
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task CreateGameAsync(Game game)
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task EditGameAsync(int id, Game game)
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task DeleteGameAsync(int id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

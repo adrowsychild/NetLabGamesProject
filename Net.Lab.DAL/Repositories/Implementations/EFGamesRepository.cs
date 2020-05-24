@@ -8,7 +8,7 @@ using Net.Lab.DataContracts.Games;
 
 namespace Net.Lab.DAL.Repositories.Implementations
 {
-    public class EFGamesRepository : IGamesRepository, IGamesAsyncRepository
+    public class EFGamesRepository : IGamesRepository
     {
         private readonly ApplicationContext context;
 
